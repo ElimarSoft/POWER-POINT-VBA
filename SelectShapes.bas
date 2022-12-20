@@ -90,20 +90,4 @@ Private Sub ClearInmediateWindow()
    VBA.SendKeys "^g^a{DEL}", True
 End Sub
 
-Public Sub CutPasteTest()
-   'Cut and Paste Test
-    
-   ClearInmediateWindow
-    
-   Dim shp0 As Shape: Set shp0 = ActiveWindow.Selection.ShapeRange.Item(1)
-   ActiveWindow.Selection.Copy
-      
-   Dim shp1 As Shape: Set shp1 = ActivePresentation.Slides(45).Shapes.Paste.Item(1)
-   
-   shp1.Name = "Peter"
-   
-   shp1.Fill.BackColor.RGB = &HFFFFFF
-   shp1.Fill.ForeColor.RGB = &HBF1F1F
-
-End Sub
 
